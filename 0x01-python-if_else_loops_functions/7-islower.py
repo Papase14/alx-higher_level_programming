@@ -2,7 +2,7 @@
 
 def islower(c):
     for i in range(97, 123):
-        if c >= chr(i) or c <= chr(i):
+        if ord(c) >= i or ord(c) <= i:
             return True
         else:
             return False
