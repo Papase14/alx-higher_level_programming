@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 
-result = "Last degit of {0}".format(number)
+result = "Last digit of {0}".format(number)
 last_digit = int(repr(number)[-1])
 
 if last_digit <= 5:
