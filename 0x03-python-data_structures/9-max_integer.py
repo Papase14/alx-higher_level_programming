@@ -7,4 +7,4 @@ def max_integer(my_list=[]):
     for x in range(1, len(my_list)):
         if my_list[x] > maximum:
             maximum = my_list[x]
-    return maximum
+        return maximum
