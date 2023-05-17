@@ -1,3 +1,7 @@
+include<stdio.h>
+include<stdlib.h>
+
+
 void print_python_dict(PyObject *p){
     PyObject *key, *value;
     Py_ssize_t pos = 0;
