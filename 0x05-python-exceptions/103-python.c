@@ -32,27 +32,28 @@ void print_python_list(PyObject *p)
   fflush(stdout);
   printf("[*] Allocated = %li\n", (((PyListObject *)(p))->allocated));
   fflush(stdout);
+  
   for (index = 0; index < size_obj; index++)
     {
       type = PyList_GET_ITEM(p, index);
       if (*((char *)(((PyObject *)(type))->ob_type)) == 'C')
-	printf("Element %li: int\n", index);
+	      printf("Element %li: int\n", index);
       else if (*((char *)((PyObject *)(type))->ob_type) == 'I')
-	printf("Element %li: str\n", index);
+	      printf("Element %li: str\n", index);
       else if (*((char *)((PyObject *)(type))->ob_type) == '\'')
-	printf("Element %li: list\n", index);
+	      printf("Element %li: list\n", index);
       else if (*((char *)((PyObject *)(type))->ob_type) == '3')
-	{
-	  printf("Element %li: float\n", index);
-	  print_python_float(type);
-	}
+	    {
+	      printf("Element %li: float\n", index);
+	      print_python_float(type);
+	    }
       else if (*((char *)((PyObject *)(type))->ob_type) == '9')
-	printf("Element %li: tuple\n", index);
+	      printf("Element %li: tuple\n", index);
       if (PyBytes_Check(type))
-	{
-	  printf("Element %li: bytes\n", index);
-	  print_python_bytes(type);
-	}
+	    {
+	      printf("Element %li: bytes\n", index);
+	      print_python_bytes(type);
+	    }
       fflush(stdout);
     }
 }
