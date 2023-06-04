@@ -3,7 +3,6 @@
     0-add_integer: add_integer()
 """
 
-
 def add_integer(a, b=98):
     """
         add_integer returns the sum of two integers
