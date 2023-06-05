@@ -86,7 +86,7 @@ class Rectangle:
             public instance method to calculate the perimeter of a rectangle
             Returns: perimeter of rectangle
         """
-        if self.__width is 0 or self.__height is 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
 
