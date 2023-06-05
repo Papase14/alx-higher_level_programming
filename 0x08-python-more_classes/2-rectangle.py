@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-        1-rectangle: class Rectangle
+        2-rectangle: class Rectangle
 """
 
 
