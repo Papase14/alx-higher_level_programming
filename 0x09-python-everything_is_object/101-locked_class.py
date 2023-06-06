@@ -11,6 +11,3 @@ class LockedClass:
              first_name (str): name
     """
     __slots__ = ["first_name"]
-    
-    def __init__(self):
-        self.first_name = None
