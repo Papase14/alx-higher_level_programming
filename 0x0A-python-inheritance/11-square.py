@@ -6,6 +6,7 @@
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
         Square  inherits from Rectangle
@@ -18,7 +19,7 @@ class Square(Rectangle):
         """
             initialises Square
         """
-        self.integer_validator("size: ", size)
+        self.integer_validator("size", size)
 
         self.__size = size
 
@@ -26,7 +27,8 @@ class Square(Rectangle):
         """
             Returns the area of square
         """
-        return self.__size * self.__size
+        area = self.__size * self.__size
+        return area
 
     def __str__(self):
-        return (f"[{type(self).__name__}] {self.__size}/{self.__size}")
+        return ("[{}] {}/{}".format(type(self).__name__, self.__size, self.__size))
