@@ -6,6 +6,7 @@
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
         Rectangle inherits from BaseGeometry
@@ -19,8 +20,8 @@ class Rectangle(BaseGeometry):
         """
             initialises Rectangle.
         """
-        self.integer_validator("width: ", width)
-        self.integer_validator("height: ", height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
 
         self.__width = width
         self.__height = height
@@ -29,10 +30,11 @@ class Rectangle(BaseGeometry):
         """
             Returns the area of a rectangle
         """
-        return self.__width * self.__height
+        area = self.__width * self.__height
+        return area
 
     def __str__(self):
         """
             Returns a string of rectangle details
         """
-        return (f"[{type(self).__name__}] {self.__width}/{self.__height}")
+        return ("[{}] {}/{}".format(type(self).__name__, self.__width, self.__height))
