@@ -1,11 +1,11 @@
 """
     unit test for models/rectangle.py
 """
-import json
-import unittest
-import sys
+
+
 from io import StringIO
 from models.rectangle import Rectangle
+import json, unittest, sys
 
 
 class TestRectangle(unittest.TestCase):
