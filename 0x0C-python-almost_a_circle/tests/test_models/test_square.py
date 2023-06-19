@@ -1,10 +1,11 @@
 """
-    unit test for models/square.py
+    unit test for square.py
 """
 
 
 from models.square import Square
-import unittest, json
+import unittest
+import json
 
 
 class TestSquare(unittest.TestCase):

@@ -1,6 +1,6 @@
 """
-    Test Case for task base.py in models directory.
-[2;2R[>77;30500;0c]10;rgb:bfbf/bfbf/bfbf]11;rgb:0000/0000/0000"""
+    Test Case for task base.py
+"""
 import unittest
 from models.base import Base
 from models.square import Square
