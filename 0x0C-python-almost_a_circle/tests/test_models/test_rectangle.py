@@ -5,7 +5,9 @@
 
 from io import StringIO
 from models.rectangle import Rectangle
-import json, unittest, sys
+import json
+import unittest
+import sys
 
 
 class TestRectangle(unittest.TestCase):
