@@ -1,11 +1,5 @@
 #!/usr/bin/node
 
-const lines = [
-    "C is fun",
-    "Python is cool",
-    "JavaScript is amazing"
-];
-  
-for (const line of lines) {
-    console.log(line);
-}
+const parameter = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+
+parameter.forEach((element) => console.log(element));
