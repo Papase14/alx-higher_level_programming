@@ -1,6 +1,12 @@
 #!/usr/bin/node
 
-const add = (a, b) => a + b;
-
-module.exports = { add }
-;
+const myObject = {
+    type: 'object',
+    value: 12
+  };
+  console.log(myObject);
+  
+  myObject.value = 89;
+  
+  console.log(myObject);
+  
