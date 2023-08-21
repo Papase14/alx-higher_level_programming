@@ -3,12 +3,13 @@
 Changes the name of a State object from the database hbtn_0e_6_usa
 """
 
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-from model_state import Base, State
-from sys import argv
 
 if __name__ == "__main__":
+    from sqlalchemy.orm import sessionmaker
+    from sqlalchemy import create_engine
+    from model_state import Base, State
+    from sys import argv
+
     if (len(argv) != 4):
         print('Use: username, password database_name')
         exit(1)
