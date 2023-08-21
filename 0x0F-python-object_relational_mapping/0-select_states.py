@@ -4,24 +4,24 @@
 This script connects to a MySQL database and retrieves data from a table called "states".
 """
 
-import sys
-import MySQLdb
-
-
 if __name__ == '__main__':
-    db = MySQLdb.connect(user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3],
-                         host='localhost',
-                         port=3306)
+    from sys import argv
+    import MySQLdb as mysql
+
+    try:
+        db = mysql.connect(host='localhost', port=3306, user=argv[1],
+                           passwd=argv[2], db=argv[3])
+    except Exception:
+        print('Failed to connect to the database')
+        exit(0)
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC;")
 
-    data = cursor.fetchall()
+    result_query = cursor.fetchall()
 
-    for row in data:
+    for row in result_query:
         print(row)
 
     cursor.close()
