@@ -11,7 +11,7 @@ url = sys.argv[1]
 
 try:
     with urllib.request.urlopen(url) as response:
-        response_content = response.read().decode('utf-8')
+        response_content = response.read().decode("utf-8")
         print(response_content)
 
 except urllib.error.HTTPError as e:
