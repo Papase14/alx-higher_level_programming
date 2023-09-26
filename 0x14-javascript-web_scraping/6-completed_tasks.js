@@ -1,26 +1,23 @@
 #!/usr/bin/node
+// web scrapper
 
 const request = require('request');
-const completedTasks = [];
 
+request.get(process.argv[2], { json: true }, (error, response, body) => {
+  if (error) {
+    console.log(error);
+    return;
+  }
 
-request(process.argv[2], (err, response, body) => {
-  if (!err) {
-    const tasks = JSON.parse(body);
-    tasks.forEach(function (user) {
-      if (completedTasks[user.userId] === undefined) {
-        completedTasks[user.userId] = 0;
-      }
-      if (user.completed === true) {
-        completedTasks[user.userId]++;
-      }
-    })
-    const number = {};
-    for (let i = 1; i < completedTasks.length; ++i) {
-      if (completeTasks[i] > 0) {
-        number[i] = completedTasks[i];
+  const tasksCompleted = {};
+  body.forEach((todo) => {
+    if (todo.completed) {
+      if (!tasksCompleted[todo.userId]) {
+        tasksCompleted[todo.userId] = 1;
+      } else {
+        tasksCompleted[todo.userId] += 1;
       }
     }
-    console.log(number);
-  }
+  })
+  console.log(tasksCompleted);
 });
