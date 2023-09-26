@@ -1,5 +1,7 @@
 #!/usr/bin/node
+
 // Number of films with the given character ID
+
 const request = require('request');
 let num = 0;
 
@@ -17,4 +19,4 @@ request.get(process.argv[2], (error, response, body) => {
     });
     console.log(num);
   }
-})
+});
