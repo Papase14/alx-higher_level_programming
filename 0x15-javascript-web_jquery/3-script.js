@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-$(document).ready(function () {
-    $("DIV#red_header").css("color", "#FF0000");
+$('div#red_header').click(function () {
+    $('header').addClass('red');
 });
